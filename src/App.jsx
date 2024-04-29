@@ -1,5 +1,6 @@
 import { Card, Stack } from "@mui/material";
 import PasswordValidator from "./components/PasswordValidator";
+import Hero from "./assets/hero.jpg";
 
 function App() {
   return (
@@ -9,8 +10,12 @@ function App() {
         minHeight="100vh"
         justifyContent="center"
         alignItems="center"
+        sx={{ background: `url(${Hero})`, backgroundSize: "cover" }}
       >
-        <Card sx={{ width: "60%" }} variant="outlined">
+        <Card
+          sx={{ width: "60%", opacity: 0.88, borderRadius: "12px" }}
+          variant="outlined"
+        >
           <PasswordValidator />
         </Card>
       </Stack>
